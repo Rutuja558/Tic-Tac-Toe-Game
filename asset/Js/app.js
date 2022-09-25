@@ -13,13 +13,8 @@ var redWinCount = 0
 var yellowWinCount = 0
 var total = 0
 var draw = 0
-// var total = redWinCount + yellowWinCount
 function game(arg) {
     var box = document.querySelector(arg).classList;
-    // var redClassCheck = box.contains("bg-red")
-    // alert(redClassCheck)
-    // var yellowClassCheck = box.contains("bg-yellow")
-    // alert(yellowClassCheck)
     if (!(box.contains("bg-red") || box.contains("bg-yellow"))) {
 
         chance ? box.add("bg-red") : box.add("bg-yellow")
@@ -34,55 +29,39 @@ function game(arg) {
     }
 }
 function checkWinner() {
-    isWinner("#box1", "#box2", "#box3", "bg-red") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box4", "#box5", "#box6", "bg-red") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box7", "#box8", "#box9", "bg-red") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box1", "#box4", "#box7", "bg-red") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box2", "#box5", "#box8", "bg-red") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box3", "#box6", "#box9", "bg-red") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box1", "#box5", "#box9", "bg-red") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box3", "#box5", "#box7", "bg-red") && setTimeout(() => {
-        resetGame()
-    }, 2000);
+    isWinner("#box1", "#box2", "#box3", "bg-red") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box4", "#box5", "#box6", "bg-red") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box7", "#box8", "#box9", "bg-red") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box1", "#box4", "#box7", "bg-red") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box2", "#box5", "#box8", "bg-red") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box3", "#box6", "#box9", "bg-red") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box1", "#box5", "#box9", "bg-red") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box3", "#box5", "#box7", "bg-red") &&
+        setTimeout(() => { resetGame() }, 2000);
 
-    isWinner("#box1", "#box2", "#box3", "bg-yellow") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box4", "#box5", "#box6", "bg-yellow") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box7", "#box8", "#box9", "bg-yellow") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box1", "#box4", "#box7", "bg-yellow") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box2", "#box5", "#box8", "bg-yellow") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box3", "#box6", "#box9", "bg-yellow") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box1", "#box5", "#box9", "bg-yellow") && setTimeout(() => {
-        resetGame()
-    }, 2000);
-    isWinner("#box3", "#box5", "#box7", "bg-yellow") && setTimeout(() => {
-        resetGame()
-    }, 2000);
+    isWinner("#box1", "#box2", "#box3", "bg-yellow") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box4", "#box5", "#box6", "bg-yellow") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box7", "#box8", "#box9", "bg-yellow") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box1", "#box4", "#box7", "bg-yellow") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box2", "#box5", "#box8", "bg-yellow") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box3", "#box6", "#box9", "bg-yellow") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box1", "#box5", "#box9", "bg-yellow") &&
+        setTimeout(() => { resetGame() }, 2000);
+    isWinner("#box3", "#box5", "#box7", "bg-yellow") &&
+        setTimeout(() => { resetGame() }, 2000);
 }
 function isWinner(id1, id2, id3, color) {
     var box1 = document.querySelector(id1).classList.contains(color)
